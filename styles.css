@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: #1c1e18;
+    margin: 0;
+    padding: 0;
+    color: white;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.game-container {
+    border: solid 2px #d8d6b5;
+    border-radius: 10px;
+    background-color: #32382b;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pg-section {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    background-color: #dcdacd;
+    width: 100%;
+    border-radius: 5px;
+    color: black;
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 1px #32382b;
+}
+
+.title-banner {
+    display: flex;
+    align-self: center;
+    width: 101.5%;
+    box-shadow: 0 4px 4px black;
+    padding: 5px;
+    margin-bottom: 5px;
+    transform: translateY(-7px);
+    background-color: #87b774;
+    font-size: xx-large;
+}
+
+.action-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    color: black;
+    padding: 5px;
+    box-shadow: 0 2px 2px black;
+    background-color: #88876f;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+.action-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    color: black;
+    padding: 5px;
+    box-shadow: 0 2px 2px black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #dcdacd;
+    border: solid 2px #88876f;
+}
+
+.action-item:hover {
+    box-shadow: 0 4px 4px black;
+    cursor: pointer;
+    transform: translateY(-2px) translateX(-1px);
+}
+
+.action-sub-item {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+.inventory-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.loading-bar {
+    width: 65%;
+    height: 10px;
+    background-color: #dcdacd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loading-bar-fill {
+    height: 100%;
+    background-color: #87b774;
+    border-radius: 10px;
+}
+
+.font-light {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.font-regular {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.font-medium {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.font-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}

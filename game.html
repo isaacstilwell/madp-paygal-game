@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" style="height: 100%; margin: 0; padding: 0">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Build Your Rax</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="sidebar" class="game-container" style="margin: 10px 5px 10px 10px">
+      <div
+        id="paygal"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 5px;
+          background-color: #88876f;
+          padding: 5px;
+          width: 300px;
+          height: 100%;
+        "
+      >
+        <img
+          src="./paygal-initials.png"
+          alt="paygal initials"
+          style="width: 125px"
+        />
+        <img
+          src="./paygal-text.png"
+          alt="paygal initials"
+          style="width: 125px"
+        />
+        <div id="pg-balance" class="pg-section">
+          <div
+            id="pg-balance-wrapper"
+            style="
+              display: flex;
+              box-sizing: border-box;
+              justify-content: space-between;
+              width: 100%;
+            "
+          >
+            <span id="pg-balance-text" style="font-size: larger"
+              >PayGal Balance</span
+            >
+            <button
+              id="pg-balance-menu"
+              style="
+                background-color: #dcdacd;
+                border: none;
+                padding: 0;
+                margin: 0;
+                color: black;
+                cursor: pointer;
+                outline: inherit;
+                border-radius: 2.5px;
+              "
+            >
+              •••
+            </button>
+          </div>
+          <span id="pg-balance-value" style="font-size: xxx-large">$75,000</span>
+        </div>
+        <div id="pg-transactions" class="pg-section" style="flex-grow: 1">
+          <div
+            id="transaction-1"
+            style="
+              padding: 5px;
+              display: flex;
+              border-top: solid 2px #d8d6b5;
+              color: black;
+              font-size: xx-large;
+              justify-content: space-between;
+            "
+          >
+            <div id="transaction-pfp-name-wrapper" style="display: flex">
+              <div
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  box-shadow: 0 2px 2px #32382b;
+                "
+              >
+                <img
+                  src="./pfp-default.jpg"
+                  alt="Profile"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+              <div style="display: flex; flex-direction: column; padding: 5px">
+                <div style="font-size: medium">Siver</div>
+                <div style="font-size: small">Received - Pending</div>
+              </div>
+            </div>
+            <div class="transaction-value">+$50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="main-game-content"
+      style="
+        display: flex;
+        flex-grow: 4;
+        flex-direction: column;
+        margin: 10px 5px 10px 10px;
+      "
+    >
+      <div
+        id="purchase-actions"
+        class="game-container"
+        style="height: 60%; box-sizing: border-box; margin-bottom: 5px"
+      >
+        <div class="title-banner font-bold">Marketplace</div>
+        <div class="action-header">
+          <div class="font-bold action-sub-item">Action</div>
+          <div class="font-bold action-sub-item">Cost</div>
+          <div class="font-bold action-sub-item">Time</div>
+          <div class="font-bold action-sub-item">Source</div>
+        </div>
+        <div id="buy-wheels-action" class="action-item">
+          <div class="font-regular action-sub-item">Buy wheels</div>
+          <div class="font-regular action-sub-item">$750</div>
+          <div class="font-regular action-sub-item">2 Days</div>
+          <div class="font-regular action-sub-item">Johns Tires</div>
+        </div>
+      </div>
+      <div
+        id="inventory-orders-wrapper"
+        style="
+          display: flex;
+          box-sizing: border-box;
+          height: 40%;
+          margin-top: 5px;
+        "
+      >
+        <div
+          id="inventory-display"
+          class="game-container"
+          style="box-sizing: border-box; width: 50%; margin-right: 5px;"
+        >
+          <div
+            class="title-banner font-bold"
+            style="width: 102%; transform: translateY(-10px)"
+          >
+            Inventory
+          </div>
+          <div
+            id="inventory-parts-row"
+            style="
+              display: flex;
+              align-self: center;
+              width: 65%;
+              justify-content: space-between;
+              align-items: center;
+              padding: 25px;
+            "
+          >
+            <div class="inventory-item">
+              <img
+                src="./tire-wheel.svg"
+                alt="tire-wheel"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Tire Wheel
+              </div>
+              <div
+                id="tire-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+            <div class="inventory-item">
+              <img
+                src="./sedan.svg"
+                alt="Car Body"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Car Body
+              </div>
+              <div
+                id="car-body-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+            <div class="inventory-item">
+              <img
+                src="./engine.svg"
+                alt="Engine"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Engine
+              </div>
+              <div
+                id="engine-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+          </div>
+          <div
+            id="inventory-vehicles-row"
+            style="
+              display: flex;
+              align-self: center;
+              width: 85%;
+              justify-content: space-between;
+              align-items: center;
+              padding: 25px;
+            "
+          >
+            <div class="inventory-item">
+              <img
+                src="./car.svg"
+                alt="car"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Car
+              </div>
+              <div
+                id="car-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+            <div class="inventory-item">
+              <img
+                src="./truck.svg"
+                alt="truck"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Truck
+              </div>
+              <div
+                id="truck-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+            <div class="inventory-item">
+              <img
+                src="./bike.svg"
+                alt="motorcycle"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Motorcycle
+              </div>
+              <div
+                id="motorcycle-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+            <div class="inventory-item">
+              <img
+                src="./big-rig.svg"
+                alt="big rig"
+                style="width: 50px; height: 50px"
+              />
+              <div
+                class="font-light"
+                style="font-size: small; margin-bottom: 5px;"
+              >
+                Big-Rig
+              </div>
+              <div
+                id="big-rig-cnt"
+                class="font-light"
+                style="font-size: small"
+              >
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="orders-display"
+          class="game-container"
+          style="box-sizing: border-box; width: 50%; margin-left: 5px"
+        >
+          <div
+            class="title-banner font-bold"
+            style="width: 102%; transform: translateY(-10px)"
+          >
+            Orders
+          </div>
+          <div id="wheel-order-status" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+            <img src="./tire-wheel.svg" alt="tire-wheel" style="height: 50px; width: 50px" />
+              <div id="wheel-order-status-bar" class="loading-bar">
+                <div class="loading-bar-fill" style="width: 75%;"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
