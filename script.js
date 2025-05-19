@@ -12,6 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const wheelsAction = document.getElementById("buy-wheels-action");
   const wheelsCounter = document.getElementById("tire-cnt");
 
+  const big_rig = "./big-rig.svg";
+  const bike = "./bike.svg";
+  const car = "./car.svg";
+  const truck = "./truck.svg";
+  const engine = "./engine.svg";
+  const body = "./sedan.svg";
+  const tire = "./tire-wheel.svg";
+
+
+
   wheelsAction.addEventListener("click", () => {
     balance.innerText = `$${(parseFloat(
       balance.innerText.replace(
